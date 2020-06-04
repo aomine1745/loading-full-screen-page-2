@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	animation: animate 6s ease-in-out infinite;
+}
+@keyframes animate {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+		background-color: #ff2c60;
+	}
+	25% {
+		transform: scaleX(1);
+		transform-origin: left;
+		background-color: #ff2c60;
+
+	}
+	25.001% {
+		transform: scaleX(1);
+		transform-origin: right;
+		background-color: #ff2c60;
+	}
+
+	50% {
+		transform: scaleX(0);
+		transform-origin: right;
+		background-color: #ff2c60;
+	}
+	50.0001% {
+		background-color: #03a9f4;
+	}
+	75% {
+		transform: scaleX(1);
+		transform-origin: right;
+		background-color: #03a9f4;
+	}
+	75.001% {
+		transform: scaleX(1);
+		transform-origin: left;
+		background-color: #03a9f4;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: left;
+		background-color: #03a9f4;
+	}
+}
+h2 {
+	color: #fff;
+	z-index: 1;
+	font-size: 6em;
+	font-weight: 800;
+}
